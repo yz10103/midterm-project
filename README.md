@@ -9,7 +9,7 @@
 
 ## **1. Project Overview**
 
-This project conducts an **exploratory data analysis (EDA)** on the relationship between **Environmental, Social, and Governance (ESG)** scores and financial performance across industries, with a specific emphasis on the **Consumer Goods sector**.  
+This project conducts an **exploratory data analysis** on the relationship between **Environmental, Social, and Governance (ESG)** scores and financial performance across industries, with a specific emphasis on the **Consumer Goods sector**.  
 Our central question is whether industries with stronger ESG practices exhibit different financial and risk characteristics and, within the consumer sector, how ESG patterns differ among subsectors.
 
 The analysis proceeds in two stages:
