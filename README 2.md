@@ -99,6 +99,18 @@ Collectively, these characteristics make the Consumer Goods sector both numerica
 
 ### **Insights from the Deep Dive into Consumer Goods**
 
+In the deeper stage of analysis, we focus exclusively on the **Consumer Goods industry**, which encompasses both *Consumer Defensive* and *Consumer Cyclical* firms. The objective of this stage is to understand how ESG performance varies within the sector and what these variations reveal about its overall sustainability profile.
+
+The results present a clear and cohesive pattern: the **Consumer Goods industry as a whole** maintains strong and relatively stable ESG performance, though moderate internal variation exists between sub-sectors. Firms in **Consumer Defensive categories**—such as food producers, beverages, and household essentials—demonstrate **higher median Total ESG scores** and **narrower dispersion**, suggesting that sustainability practices and governance standards are more institutionalized and standardized within these companies. These firms generally operate in essential product markets, where long-term consumer trust and reputation are critical, naturally aligning with consistent ESG integration.
+
+Conversely, **Consumer Cyclical firms**—including apparel, retail, and discretionary goods—show **slightly lower median ESG scores** and wider distribution ranges. This broader spread reflects differences in business models, market exposure, and the degree to which ESG investments are prioritized relative to short-term financial goals. Nonetheless, most firms in this group cluster around moderate ESG levels, indicating that sustainability has become a mainstream concern across the entire sector.
+
+Overall, the deep dive demonstrates that **Consumer Goods companies collectively outperform most other sectors in ESG consistency and maturity**, with intra-sector differences largely driven by product type and market positioning rather than ESG neglect. These findings underscore the sector’s cohesive and institutionalized commitment to sustainability, supported by public accountability, regulatory oversight, and consumer expectations.
+
+---
+
+### **Insights from the Deep Dive into Consumer Goods**
+
 In our focused analysis, we subdivide Consumer Goods into two primary categories:  
 **Consumer Defensive** and **Consumer Cyclical**.  
 The boxplot comparing these groups (see figure “Distribution of Total ESG by Sector”) illustrates clear differences in median scores and dispersion.
