@@ -64,99 +64,129 @@ The cleaned dataset provides complete numerical and categorical information for 
 ## **4. Methodology**
 
 ### **4.1 Industry-Level Analysis**
-We begin by examining how **Total ESG** varies across sectors.  
-Boxplots and histograms summarize ESG distributions, while the **Kruskal–Wallis test** assesses whether differences in ESG levels among sectors are statistically significant.  
+We examine **Total ESG** variation across sectors using boxplots and histograms.  
+A **Kruskal–Wallis test** evaluates whether ESG levels differ significantly among sectors.  
+The notebook output shows a test statistic **H ≈ 175.6, p ≈ 4.2×10⁻³³**, confirming strong sectoral differences.
+<img width="989" height="590" alt="ESG Scores by Sector" src="https://github.com/user-attachments/assets/2233ed73-4e92-46f0-b9b9-4ec39df310d7" />
 
-We also compute **sector-wise means** for governance, environment, ROE, and beta, creating scatter plots to relate ESG components to profitability and risk.
+
+<img width="971" height="613" alt="Screenshot 2025-10-23 at 19 21 19" src="https://github.com/user-attachments/assets/bfd68557-38e5-47cc-90b4-306b8de7b888" />
 
 ### **4.2 Cross-Industry Interpretation**
-- *Governance vs ROE:* reveals how governance quality aligns with average profitability.  
-- *Environment vs Beta:* shows whether environmentally stronger sectors experience lower market volatility.  
+Plots and summary statistics relate sector-level **Environment**, **Governance**, **ROE**, and **Beta** measures.  
+These reveal contrasting ESG-risk-profitability patterns across industries.
+<img width="1074" height="712" alt="Screenshot 2025-10-23 at 19 21 37" src="https://github.com/user-attachments/assets/8b62ab39-612b-4f4b-9f88-c614edbe7844" />
 
-These relationships guide our later Consumer sector hypotheses.
+
+<img width="1074" height="725" alt="Screenshot 2025-10-23 at 19 21 49" src="https://github.com/user-attachments/assets/010eba15-0126-4517-a4b9-436b565a42de" />
+
+
 
 ### **4.3 Consumer Sector Exploration**
-We isolate all consumer-related firms obtained from the Yahoo screeners, forming a detailed dataset of **Consumer Defensive** and **Consumer Cyclical** companies.  
-Within this subset we:
+We isolate consumer firms (both *Consumer Defensive* and *Consumer Cyclical*) and explore:
+1. Missingness of Environmental and Governance scores,  
+2. The distribution of Total ESG, and  
+3. Descriptive statistics highlighting leading and lagging firms.
+<img width="952" height="591" alt="Screenshot 2025-10-23 at 19 22 02" src="https://github.com/user-attachments/assets/c430db19-aabf-4205-a519-9da4d7e7507c" />
 
-1. Examine missing ESG values (E and G) to gauge disclosure completeness.  
-2. Visualize the **distribution of Total ESG scores** across the consumer sector.  
-3. Compute descriptive statistics to identify ESG leaders and laggards.
 
-### **4.4 Hypothesis Testing**
-Derived from the cross-industry findings, we test two formal hypotheses:
+<img width="709" height="472" alt="Screenshot 2025-10-23 at 19 22 16" src="https://github.com/user-attachments/assets/509887af-6ec0-4cee-8f61-145217412ae1" />
 
-- **H1:** Higher *Governance Score* → Higher *Profitability (ROE)*.  
-- **H2:** Higher *Environment Score* → Lower *Market Risk (Beta)*.
 
-Ordinary Least Squares (OLS) regressions are run using `statsmodels.formula.api` to estimate these relationships within consumer firms.
+
+
+### **4.4 Hypothesis Testing** 
+
+Two simple **Ordinary Least Squares (OLS)** models are estimated for Consumer firms:
+
+
+- **H1:** `returnOnEquity ~ governanceScore`  
+- **H2:** `beta ~ environmentScore`
+
+These are **bivariate exploratory regressions** meant to identify directional relationships, not causal effects.
+There are also scatter plots visualizing this effect.
+
+<img width="837" height="597" alt="Screenshot 2025-10-23 at 19 23 01" src="https://github.com/user-attachments/assets/d191331e-c9de-4a4d-bb2c-821f69c54e7a" />
+
+
+<img width="837" height="597" alt="Screenshot 2025-10-23 at 19 23 12" src="https://github.com/user-attachments/assets/39e07364-950b-48b2-821a-e8f617031285" />
+
+
 
 ### **4.5 ESG and Firm Characteristics**
-We explore whether ESG relates to **firm size** and **volatility**:
-
-- Scatterplots: ESG vs log(Market Cap) and ESG vs Beta.  
-- Spearman correlations quantify monotonic relationships.  
-- A multivariate OLS regression of `totalEsg ~ log_marketCap + beta` evaluates combined effects.
+We assess whether **Total ESG** relates to firm size and market risk using:
+- Spearman correlations between ESG and key variables, and  
+- A multivariate regression:  
+  \[
+  \text{totalEsg} \sim \log(\text{marketCap}) + \text{beta}
+  \]
 
 ### **4.6 Disclosure Behavior**
-To identify transparency gaps, we calculate the percentage of missing **E** and **G** scores per **Consumer industry** and visualize them with paired bar charts.  
-A complementary boxplot of **Total ESG by industry** reveals how ESG levels differ among those that report data.
+We calculate per-industry missingness for **Environmental** and **Governance** scores within the consumer sector.  
+The results are visualized via **bar plots** and **boxplots** to show transparency patterns and ESG distribution differences.
+<img width="1345" height="575" alt="Screenshot 2025-10-23 at 19 23 28" src="https://github.com/user-attachments/assets/e842ad3a-9aa1-4d71-bb86-40be9a3d59b7" />
+
+
+<img width="1176" height="709" alt="Screenshot 2025-10-23 at 19 23 44" src="https://github.com/user-attachments/assets/51fb2ad6-46ee-43ee-884d-7dcaf56c8f81" />
+
+
+
 
 ---
 
 ## **5. Key Findings and Interpretation**
 
-### **5.1 Cross-Industry ESG Patterns**
-ESG performance varies considerably across sectors.  
-The **Kruskal–Wallis test** confirms these differences are statistically significant (*p < 0.001*).  
-Sectors such as **Utilities**, **Consumer**, and **Staples** show relatively higher median ESG scores, while **Energy**, **Financials**, and **Recreational industries** lag.  
-
-Histogram and boxplot analyses highlight that sectors with strong consumer visibility and regulatory oversight tend to maintain tighter ESG distributions, implying standardized sustainability frameworks.
+### **5.1 Cross-Industry ESG Patterns** 
+ESG levels vary widely by sector.  
+The Kruskal–Wallis test confirms these differences are statistically significant (*p < 0.001*).  
+Sectors such as **Utilities** and **Consumer** exhibit higher median ESG scores, while **Energy** and **Financials** lag.
 
 ---
 
-### **5.2 Governance vs Profitability (ROE)**
-In the scatterplot of **average Governance Score vs Return on Equity**, the **Consumer sector** lies in the *upper-left quadrant*—relatively high governance but moderate ROE.  
-This suggests that strong governance promotes **stability and compliance** more than short-term profit maximization.  
-By contrast, **Financials** and **Energy** attain higher ROE despite weaker governance, consistent with capital-intensive or cyclical profit structures.
+### **5.2 Governance vs Profitability (ROE)** 
+The bivariate regression  
+`returnOnEquity ~ governanceScore`  
+is **not statistically significant** (R² ≈ 0.002, *p ≈ 0.504*).  
+
+This means **H1 is not supported** — there is **no clear evidence** that stronger governance directly corresponds to higher profitability (ROE) in this dataset.
 
 ---
 
-### **5.3 Environment vs Market Risk (Beta)**
-A visible **downward relationship** emerges between **Environmental Score** and **Beta** across sectors.  
-Industries with stronger environmental management—such as Utilities and Staples—tend to experience **lower volatility**, whereas high-beta industries show weaker environmental performance.  
-This supports the interpretation that environmental stewardship corresponds to **greater market stability**.
+### **5.3 Environment vs Market Risk (Beta)** 
+The regression  
+`beta ~ environmentScore`  
+produces a **negative and significant coefficient** (*β ≈ −0.0333, p < 0.01*).  
+This supports **H2**, suggesting that firms with higher environmental scores tend to exhibit **lower market risk (Beta)**, aligning with stability-oriented ESG interpretations.
 
 ---
 
-### **5.4 Why the Consumer Goods Sector Stands Out**
-When comparing all sectors, **Consumer Goods** demonstrates both **high ESG averages** and **low variability**, making it a statistically and substantively interesting focus.  
-The Consumer sector also contains a **large sample size** drawn from both *Consumer Defensive* and *Consumer Cyclical* subsectors, ensuring robust representation.
-
-Consumer companies operate in highly visible markets where sustainability influences brand trust and purchasing behavior.  
-Consequently, the sector shows consistent ESG commitment even when profitability outcomes differ.
+### **5.4 Consumer Sector ESG Distribution** 
+Consumer-sector Total ESG scores are broadly distributed but center around moderate values.  
+Subsector differences remain visible — some (e.g., Household, Food & Beverage) cluster higher, while others (e.g., Apparel, Leisure) show greater variation or missingness.
 
 ---
 
-### **5.5 Consumer Sector ESG Distribution**
-Within the Consumer sector, **Total ESG scores** are widely dispersed, with notable leaders and laggards.  
-Histogram analysis shows a roughly normal distribution centered near mid-range values, indicating broad engagement but unequal depth of implementation.
+### **5.5 ESG and Firm Characteristics** 
+Correlation and regression analysis yield:
 
-Missing-value diagnostics reveal that:
-- Some firms omit **E** or **G** scores entirely, reducing transparency.  
-- Missingness rates vary by subsector, hinting that disclosure practices differ by industry culture rather than data unavailability.
+- **Spearman correlation:** ESG–Beta shows a small negative association (ρ ≈ −0.1465, *p ≈ 0.0027*).  
+- **Multivariate OLS (`totalEsg ~ log_marketCap + beta`):**
+  - log_marketCap coefficient = **−1.01** (*p < 0.001*)  
+  - beta coefficient = **−1.81** (*p ≈ 0.002*)
+
+Thus, in this sample:
+> **Larger firms and those with higher volatility tend to have lower Total ESG scores.**
+
+This **contradicts** the earlier expectation that larger firms have higher ESG scores, illustrating how exploratory results can challenge assumptions.
 
 ---
 
-### **5.6 Hypothesis Results**
+### **5.6 Disclosure Behavior Across Consumer Industries** 
+Bar-plot analysis reveals uneven ESG transparency:
+- **Apparel** and **Leisure** firms show higher rates of missing E/G data.  
+- **Food**, **Beverage**, and **Household Products** show more complete disclosures.  
 
-**H1: Governance → Profitability**  
-OLS regression of `ROE ~ governanceScore` finds a positive though moderate coefficient, suggesting that **better governance aligns with improved profitability**, supporting the first hypothesis within the limitations of data completeness.
-
-**H2: Environment → Risk (Beta)**  
-Regression of `Beta ~ environmentScore` yields a **negative coefficient**, consistent with the notion that environmentally proactive firms face **lower market risk**.  
-This aligns with the earlier cross-industry trend that strong environmental behavior correlates with stability.
-
+   Boxplots confirm that even among reporting firms, ESG performance varies by subsector, highlighting inconsistency in sustainability reporting practices.
 ---
 
 ### **5.7 ESG and Firm Characteristics**
@@ -184,22 +214,24 @@ The accompanying boxplot of Total ESG by industry shows that even within disclos
 This project provides a comprehensive exploratory view of ESG dynamics across industries using real-time Yahoo Finance data.  
 Key conclusions:
 
-1. **ESG scores differ significantly by industry.**  
-   Consumer-facing sectors and utilities maintain higher and more consistent scores, whereas capital-intensive or entertainment sectors trail.
+1. **ESG scores differ significantly across sectors.**  
+   Kruskal–Wallis test confirms strong cross-sector variation (*p < 0.001*).
 
-2. **Consumer Goods lead in consistency.**  
-   The sector’s uniform ESG behavior arises from brand pressure, public exposure, and stakeholder expectations.
+2. **Governance → Profitability:**  
+   Not statistically significant. No evidence that higher governance scores predict higher ROE in this dataset.
 
-3. **Governance supports profitability; environmental effort reduces risk.**  
-   Regression outcomes suggest that strong governance aligns with higher ROE, and robust environmental management aligns with lower Beta.
+3. **Environment → Risk:**  
+   Significant negative relationship — firms with higher environmental scores show lower market beta (less risk).
 
-4. **Firm size and stability matter.**  
-   Larger, less volatile firms typically exhibit stronger ESG performance.
+4. **Firm size and volatility:**  
+   Contrary to common assumptions, larger firms in this dataset exhibit **lower Total ESG scores**, and higher-beta firms also score lower.
 
-5. **Disclosure remains uneven.**  
-   Variations in missing E/G data across industries imply that ESG transparency is still evolving, especially in discretionary consumer segments.
+5. **Disclosure patterns vary.**  
+   Missingness in E/G reporting differs by consumer subsector, reflecting uneven transparency practices.
 
-Overall, the findings highlight how **sustainability has become institutionalized in Consumer Goods**—not merely a reputational choice but an operational standard shaping long-term resilience.
+> Overall, the notebook’s exploratory evidence suggests that **environmental performance relates to stability**, while **governance–profitability links are weak**.  
+> Firm size does not guarantee better ESG standing, underscoring the complexity of sustainability-performance dynamics in the consumer goods industry.
+
 
 ---
 
