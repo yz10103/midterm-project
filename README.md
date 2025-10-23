@@ -117,10 +117,8 @@ There are also scatter plots visualizing this effect.
 We assess whether **Total ESG** relates to firm size and market risk using:
 - Spearman correlations between ESG and key variables, and  
 - A multivariate regression:  
-  \[
-  \text{totalEsg} \sim \log(\text{marketCap}) + \text{beta}
-  \]
-
+ $\text{totalEsg} \sim \log(\text{marketCap}) + \text{beta}$
+  
 ### **4.6 Disclosure Behavior**
 We calculate per-industry missingness for **Environmental** and **Governance** scores within the consumer sector.  
 The results are visualized via **bar plots** and **boxplots** to show transparency patterns and ESG distribution differences.
