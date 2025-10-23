@@ -1,4 +1,5 @@
-# **ESG Scores and Financial Performance Across Industries**
+# **ESG Scores and Financial Performance Across Industries: A Focus on the Consumer Goods Sector**
+
 
 ### **Team Members**
 - **Menghan Liu**  
