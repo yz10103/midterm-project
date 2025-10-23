@@ -25,9 +25,9 @@ The study is descriptive rather than predictive: we rely on visualizations and s
 
 All data are gathered **directly from public Yahoo Finance endpoints** and **Wikipedia**, without the use of paid APIs.  
 
-1. **S&P 500 tickers**  
-   - Scraped from the official *Wikipedia List of S&P 500 companies* page.  
-   - Provides company symbols for broad-market coverage.
+1. **S&P 500 Tickers**  
+- Scraped from the official Wikipedia *List of S&P 500 companies* page.  
+- Provides company symbols for broad-market coverage, representing major U.S. firms that compose the S&P 500 stock market index.  
 
 2. **Yahoo Finance**  
    - Retrieved company-level information through the `yfinance` package, including:  
