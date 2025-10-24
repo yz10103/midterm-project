@@ -70,15 +70,18 @@ The notebook output shows a test statistic **H ≈ 175.6, p ≈ 4.2×10⁻³³**
 <img width="989" height="590" alt="ESG Scores by Sector" src="https://github.com/user-attachments/assets/2233ed73-4e92-46f0-b9b9-4ec39df310d7" />
 
 
-<img width="971" height="613" alt="Screenshot 2025-10-23 at 19 21 19" src="https://github.com/user-attachments/assets/bfd68557-38e5-47cc-90b4-306b8de7b888" />
+<img width="790" height="490" alt="Unknown-2" src="https://github.com/user-attachments/assets/3e8962ee-d891-4515-a64a-f95cc2bd704d" />
+
 
 ### **4.2 Cross-Industry Interpretation**
 Plots and summary statistics relate sector-level **Environment**, **Governance**, **ROE**, and **Beta** measures.  
 These reveal contrasting ESG-risk-profitability patterns across industries.
-<img width="1074" height="712" alt="Screenshot 2025-10-23 at 19 21 37" src="https://github.com/user-attachments/assets/8b62ab39-612b-4f4b-9f88-c614edbe7844" />
+<img width="889" height="590" alt="Unknown-3" src="https://github.com/user-attachments/assets/2090208e-ddf8-45a4-97d5-8e38b93106a1" />
 
 
-<img width="1074" height="725" alt="Screenshot 2025-10-23 at 19 21 49" src="https://github.com/user-attachments/assets/010eba15-0126-4517-a4b9-436b565a42de" />
+
+<img width="886" height="590" alt="Unknown-4" src="https://github.com/user-attachments/assets/73128e7f-6329-4eec-afc7-5e0e42111b3d" />
+
 
 
 
@@ -87,10 +90,12 @@ We isolate consumer firms (both *Consumer Defensive* and *Consumer Cyclical*) an
 1. Missingness of Environmental and Governance scores,  
 2. The distribution of Total ESG, and  
 3. Descriptive statistics highlighting leading and lagging firms.
-<img width="952" height="591" alt="Screenshot 2025-10-23 at 19 22 02" src="https://github.com/user-attachments/assets/c430db19-aabf-4205-a519-9da4d7e7507c" />
+<img width="790" height="490" alt="Unknown-5" src="https://github.com/user-attachments/assets/a2cc8592-f6aa-4ebb-a609-00bbafb543f7" />
 
 
-<img width="709" height="472" alt="Screenshot 2025-10-23 at 19 22 16" src="https://github.com/user-attachments/assets/509887af-6ec0-4cee-8f61-145217412ae1" />
+
+<img width="590" height="390" alt="Unknown-6" src="https://github.com/user-attachments/assets/0d21b78c-452d-4e91-8fac-1ad7af939c5a" />
+
 
 
 
@@ -106,10 +111,11 @@ Two simple **Ordinary Least Squares (OLS)** models are estimated for Consumer fi
 These are **bivariate exploratory regressions** meant to identify directional relationships, not causal effects.
 There are also scatter plots visualizing this effect.
 
-<img width="837" height="597" alt="Screenshot 2025-10-23 at 19 23 01" src="https://github.com/user-attachments/assets/d191331e-c9de-4a4d-bb2c-821f69c54e7a" />
+<img width="690" height="490" alt="Unknown-7" src="https://github.com/user-attachments/assets/9a1f0c2c-b51e-4949-bc3a-90ba0e239326" />
 
 
-<img width="837" height="597" alt="Screenshot 2025-10-23 at 19 23 12" src="https://github.com/user-attachments/assets/39e07364-950b-48b2-821a-e8f617031285" />
+
+<img width="690" height="490" alt="Unknown-8" src="https://github.com/user-attachments/assets/a2d1d87d-1a9e-464f-a256-4abe01d069cf" />
 
 
 
@@ -122,10 +128,13 @@ We assess whether **Total ESG** relates to firm size and market risk using:
 ### **4.6 Disclosure Behavior**
 We calculate per-industry missingness for **Environmental** and **Governance** scores within the consumer sector.  
 The results are visualized via **bar plots** and **boxplots** to show transparency patterns and ESG distribution differences.
-<img width="1345" height="575" alt="Screenshot 2025-10-23 at 19 23 28" src="https://github.com/user-attachments/assets/e842ad3a-9aa1-4d71-bb86-40be9a3d59b7" />
+<img width="1387" height="593" alt="Unknown-9" src="https://github.com/user-attachments/assets/f1533edd-4aab-44dd-a580-4a4456ced370" />
 
 
-<img width="1176" height="709" alt="Screenshot 2025-10-23 at 19 23 44" src="https://github.com/user-attachments/assets/51fb2ad6-46ee-43ee-884d-7dcaf56c8f81" />
+
+<img width="979" height="590" alt="Unknown-10" src="https://github.com/user-attachments/assets/a76a6791-a716-4df3-a906-0ee0477f816a" />
+
+
 
 
 
