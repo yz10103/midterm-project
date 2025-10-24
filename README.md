@@ -244,11 +244,11 @@ Key conclusions:
 
 ## **7. Reproducibility and Code Structure**
 
-All analyses are contained in **`MIDTERM_Q(1)(2).py`**, which executes sequentially and reproducibly.  
+All analyses are contained in **`MIDTERM_PROJECT_DATA_BOOTCAMP.ipynb`**, which executes sequentially and reproducibly.  
 Major code sections:
 
 1. **Data Collection** – scrape S&P 500 tickers (Wikipedia) and Consumer lists (Yahoo Screeners).  
-2. **Feature Extraction** – pull financial and ESG metrics via `yfinance`.  
+2. **Feature Extraction** – pull financial and ESG metrics via `yfinance`. The documentation link is https://ranaroussi.github.io/yfinance/.
 3. **Data Cleaning & Merging** – handle missing values and normalize variables.  
 4. **Exploratory Plots** – histograms, boxplots, sector comparisons.  
 5. **Statistical Tests & Regressions** – Kruskal–Wallis, Spearman, OLS.  
@@ -277,7 +277,7 @@ The script can be run in **Google Colab** or **Jupyter Notebook** to reproduce e
 ## **9. Data References**
 
 - **S&P 500 Constituents:** [Wikipedia – List of S&P 500 companies](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies)  
-- **Financial and ESG Data:** [Yahoo Finance](https://finance.yahoo.com)  
+- **Financial and ESG Data:** [Yahoo Finance](https://finance.yahoo.com). This project also uses [`yfinance`](https://github.com/ranaroussi/yfinance) to collect financial and ESG data for S&P 500 companies.
 - **Consumer Sector Screeners:** Yahoo Finance API (`ms_consumer_defensive`, `ms_consumer_cyclical`)
 
 
